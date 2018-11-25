@@ -95,7 +95,6 @@ public class CustomArrayListTest {
 		list.add("only");
 		list.add("a");
 		list.add("test");
-		
 		assertTrue(list.contains("This"));
 		assertTrue(list.contains("is"));
 		assertTrue(list.contains("only"));
