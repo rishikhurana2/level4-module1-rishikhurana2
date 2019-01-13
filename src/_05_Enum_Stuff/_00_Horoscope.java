@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class _00_Horoscope {
 	// 1. Create an enum in a separate file called Zodiac that contains a category for
@@ -79,7 +80,9 @@ public class _00_Horoscope {
 	}
 	// 3. Make a main method to test your method
 	public static void main(String[] args) throws IOException {
-		Zodiac z = Zodiac.ARIES;
-		DisplayHoroscope(z);
+//		Zodiac z = Zodiac.ARIES;
+//		DisplayHoroscope(z);
+		int x = Zodiac.ARIES.compareTo(Zodiac.ARIES);
+		System.out.println(x);
 	}
 }
