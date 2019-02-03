@@ -119,18 +119,22 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		// direction accordingly
 		case KeyEvent.VK_UP: {
 			snake.setDirection(Direction.UP);
+			//System.out.println("Direc. Change Up");
 			break;
 		}
 		case KeyEvent.VK_DOWN: {
 			snake.setDirection(Direction.DOWN);
+			//System.out.println("Direc. Change Down");
 			break;
 		}
 		case KeyEvent.VK_LEFT: {
 			snake.setDirection(Direction.LEFT);
+			//System.out.println("Direc. Change Left");
 			break;
 		}
 		case KeyEvent.VK_RIGHT: {
 			snake.setDirection(Direction.RIGHT);
+			//System.out.println("Direc. Change Right");
 			break;
 		}
 		// if the space key is pressed, call the snake's feed method
@@ -187,7 +191,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		snake.update();
 		//2. if the snake is colliding with its own body 
 		//   or if the snake is out of bounds, call gameOver
-		if (snake.isOutOfBounds()) {
+		if (snake.isOutOfBounds() || snake.isHeadCollidingWithBody()) {
 			gameOver();
 			System.out.println("Game Over");
 		}
